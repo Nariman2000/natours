@@ -9,6 +9,7 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 const compression = require('compression');
+const cors = require('cors');
 
 // UTILS
 const { AppError } = require('./utils/appError');
@@ -24,6 +25,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // 1- GLOBAL MIDDLEWARES
 // STATIC_FILES
+app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Security HTTP Headers
