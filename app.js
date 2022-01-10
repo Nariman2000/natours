@@ -14,6 +14,7 @@ const { AppError } = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const setHeaderErr = require('./utils/setHeaderError');
 
+// START EXPRESS APP
 const app = express();
 
 // TEMPLATE ENGINE
